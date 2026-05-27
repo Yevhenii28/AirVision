@@ -7,21 +7,31 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="auth-page">
-    <div class="auth-card">
-    <h2>Зареєструватися</h2>
+    <header class="navbar">
+    <div class="logo">AirVision</div>
+    <nav>
+      <a href="index.html">Головна</a>
+      <button onclick="toggleTheme()" class="btn">Змінити тему</button>
+    </nav>
+</header>
+<main class="content">
+    <div class="auth-page">
+        <div class="auth-card">
+            <h2>Зареєструватися</h2>
 
-    <form onsubmit="return validateRegister()">
-        <input type="text" id="name" placeholder="Name">
-        <input type="text" id="surname" placeholder="Surname">
-        <input type="email" id="email" placeholder="Email">
-        <input type="password" id="password" placeholder="Password">
-        <button type="submit">Створити акаунт</button>
-    </form>
-    <br/>
-    <a href="login.html">Вже маєте акаунт?</a>
+            <form onsubmit="return validateRegister()">
+                <input type="text" id="name" placeholder="Name">
+                <input type="text" id="surname" placeholder="Surname">
+                <input type="email" id="email" placeholder="Email">
+                <input type="password" id="password" placeholder="Password">
+                <button type="submit">Створити акаунт</button>
+            </form>
+            <br/>
+            <a href="login.html">Вже маєте акаунт?</a>
+        </div>
     </div>
-</div>
+</main>
+
 <script src="js/app.js"></script>
 </body>
 </html>

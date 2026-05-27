@@ -13,26 +13,26 @@
   <nav>
     <a href="index.html">Головна</a>
     <a href="dashboard.html">Показники</a>
+
+    <button onclick="toggleTheme()" class="btn">Змінити тему</button>
   </nav>
 </header>
+<main class="content">
+  <section class="dashboard">
+    <h1>Air Quality Dashboard</h1>
 
-<section class="dashboard">
+    <div class="grid">
+      <div class="card">AQI: <span id="aqi">72</span></div>
+      <div class="card">PM2.5: 18</div>
+      <div class="card">Температура: 23°C</div>
+      <div class="card">Вологість: 55%</div>
+    </div>
 
-  <h1>Air Quality Dashboard</h1>
-
-  <div class="grid">
-    <div class="card">AQI: <span id="aqi">72</span></div>
-    <div class="card">PM2.5: 18</div>
-    <div class="card">Температура: 23°C</div>
-    <div class="card">Вологість: 55%</div>
-  </div>
-
-  <button onclick="randomizeAQI()" class="btn">
-    Оновити дані
-  </button>
-
-</section>
-
+    <button onclick="randomizeAQI()" class="btn">
+      Оновити дані
+    </button>
+  </section>
+</main>
 <script src="js/app.js"></script>
 </body>
 </html>
