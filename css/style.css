@@ -166,3 +166,67 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* light theme features */
+body.light {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+body.light .navbar {
+  background: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+body.light .navbar a {
+  color: #0f172a;
+}
+
+body.light .logo {
+  color: #0f172a;
+  font-weight: bold;
+}
+
+body.light .hero {
+  background: #ffffff;
+}
+
+body.light .hero p {
+  color: #475569;
+}
+
+body.light .btn {
+  background: #0ea5e9;
+  color: white;
+}
+
+body.light .btn:hover {
+  background: #0284c7;
+}
+
+body.light .card {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+body.light .auth-page {
+  background: #f1f5f9;
+}
+
+body.light .auth-card {
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+body.light .auth-card input {
+  background: #f8fafc;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+}
+
+body.light .dashboard {
+  background: #f8fafc;
+}

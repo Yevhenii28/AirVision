@@ -1,4 +1,3 @@
-// REGISTER VALIDATION
 function validateRegister() {
   let name = document.getElementById("name").value;
   let surname = document.getElementById("surname").value;
@@ -24,7 +23,6 @@ function validateRegister() {
   return false;
 }
 
-// LOGIN VALIDATION
 function validateLogin() {
   let email = document.getElementById("loginEmail").value;
   let password = document.getElementById("loginPassword").value;
@@ -36,6 +34,12 @@ function validateLogin() {
 
   alert("Login successful!");
   return false;
+}
+
+const themeToggleBtn = document.getElementById('themeToggle');
+
+function toggleTheme() {
+  document.body.classList.toggle("light");
 }
 
 // DASHBOARD FAKE DATA
