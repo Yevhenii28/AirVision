@@ -8,29 +8,53 @@
 </head>
 <body>
 
-<header class="navbar">
-  <div class="logo">AirVision</div>
-  <nav>
-    <a href="index.html">Головна</a>
-    <a href="dashboard.html">Показники</a>
+<header class="navbar" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 30px; background: #0f172a; border-bottom: 1px solid #1e293b;">
+  <div class="logo" style="font-size: 24px; font-weight: bold; color: #38bdf8;">AirVision</div>
+  
+  <nav style="display: flex; align-items: center; gap: 25px;">
+    <a href="index.html" style="color: #ffffff; text-decoration: none; font-weight: bold;">Головна</a>
+    <a href="dashboard.html" style="color: #ffffff; text-decoration: none; font-weight: bold;">Показники</a>
 
-    <button onclick="toggleTheme()" class="btn">Змінити тему</button>
+    <div class="nav-controls" style="display: flex; align-items: center; gap: 20px;">
+      <button onclick="toggleTheme()" class="btn" style="margin: 0; display: inline-flex; align-items: center;">
+          Змінити тему
+      </button>
+      <div class="user-profile-block" style="display: flex; align-items: center; gap: 15px;">
+          <span id="welcome-user" style="color: #e2e8f0; font-size: 15px; white-space: nowrap; display: inline-block;">Завантаження...</span>
+          <button onclick="logout()" style="background: #ef4444; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; font-weight: bold; transition: 0.2s; white-space: nowrap; margin: 0;">
+              Вийти
+          </button>
+      </div>
+    </div>  
   </nav>
 </header>
 <main class="content">
   <section class="dashboard">
     <h1>Air Quality Dashboard</h1>
 
-    <div class="grid">
-      <div class="card">AQI: <span id="aqi">72</span></div>
-      <div class="card">PM2.5: 18</div>
-      <div class="card">Температура: 23°C</div>
-      <div class="card">Вологість: 55%</div>
-    </div>
+    <div class="grid" id="current-data"></div>
 
-    <button onclick="randomizeAQI()" class="btn">
+    <button type="button" id="refresh-btn" class="btn">
       Оновити дані
     </button>
+
+    <div class="card" style="margin-top: 30px; text-align: left;">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+        <h3>Історія моніторингу:</h3>
+        
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <label for="aqi-filter" style="color: #94a3b8; font-size: 14px;">Фільтр AQI:</label>
+          <select id="aqi-filter" onchange="applyFilter()" style="background: #0f172a; color: white; border: 1px solid #334155; padding: 6px 12px; border-radius: 6px; cursor: pointer;">
+            <option value="all">Всі записи</option>
+            <option value="good">Чисте повітря (AQI ≤ 50)</option>
+            <option value="moderate">Помірне (AQI 51–100)</option>
+            <option value="poor">Забруднене (AQI > 100)</option>
+          </select>
+        </div>
+      </div>
+  
+      <div id="history-list"></div>
+    </div>
   </section>
 </main>
 <script src="js/app.js"></script>

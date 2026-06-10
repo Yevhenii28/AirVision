@@ -1,0 +1,30 @@
+{
+  "name": "airvision",
+  "version": "1.0.0",
+  "description": "Website for tracking air quality.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yevhenii28/AirVision.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Yevhenii28/AirVision/issues"
+  },
+  "homepage": "https://github.com/Yevhenii28/AirVision#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^6.0.1"
+  },
+  "devDependencies": {
+    "jest": "^30.4.2"
+  }
+}
